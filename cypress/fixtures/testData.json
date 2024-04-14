@@ -1,0 +1,7 @@
+{
+        "productOne": "sweater",
+        "productTwo": "TV",
+        "productTree": "Mobile",
+        "AddToWishList": "#wishListMainButton",
+        "BuyNow": "#buy-now-button"
+}
