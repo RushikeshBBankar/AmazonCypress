@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import {footetCount,linkTestCases} from '../../pages/footer'
+import {footerCount,linkTestCases} from '../../pages/footer'
 
 describe('Amazon Footer Links', () => {
         context('Footer Length',()=>{
@@ -8,7 +8,7 @@ describe('Amazon Footer Links', () => {
                         cy.HomePage()
                 })
         
-                footetCount()
+                footerCount()
         })
 
         context('Verify The Links',()=>{

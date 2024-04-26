@@ -1,7 +1,7 @@
 import linkName from '../fixtures/footerLink.json'
 
 let length
-export function footetCount() {
+export function footerCount() {
         it('Counts the number of links in the footer', () => {
                 cy.get('.navFooterVerticalRow').within(() => {
                         cy.get('a').then(($value) => {
