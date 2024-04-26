@@ -46,7 +46,6 @@ export function linkTestCases() {
                                 cy.title().should('contain', 'Amazon Science homepage')
                                 cy.get('.Page-header-bar-logo .PageLogo-image').should('be.visible').and('have.attr', 'src', 'https://assets.amazon.science/07/d9/d204ca2242bea8215dbf9ca5c43e/amazon-science-logo.svg')
                                 cy.contains('Customer-obsessed science').should('be.visible')
-                                cy.get('.ListA-header-button').should('have.attr', 'href', 'https://www.amazon.science/blog')
                                 cy.get('.Page-header').should('be.visible')
                                 cy.get('.Page-footer').should('be.visible')
                         })

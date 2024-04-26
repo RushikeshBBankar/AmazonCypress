@@ -11,6 +11,9 @@ let L_Size_clothe_Price
 export function searchBestSellerBook() {
         cy.get('#nav-xshop-container').contains('Best Sellers').should('be.visible').click()
         cy.get('[role="group"]').find('a').contains('Book').should('be.visible').click()
+        cy.get('#zg-left-col').contains('Health, Family & Personal Development').should('be.visible').click()
+        cy.get('#zg-left-col').contains('Self-Help').should('be.visible').click()
+        cy.get('#zg-left-col').contains('Abuse').should('be.visible').click()
 }
 
 export function addTwoBookInCart() {
@@ -60,8 +63,8 @@ export function addClothes() {
                         })
                         cy.get('.a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2').find('a').invoke('removeAttr', 'target').click()
                 })
-                cy.get('#native_dropdown_selected_size_name').select('L')
-                cy.get('#native_dropdown_selected_size_name').contains('L').should('be.visible')
+                cy.get('#native_dropdown_selected_size_name').select('M')
+                cy.get('#native_dropdown_selected_size_name').contains('M').should('be.visible')
                 cy.contains('Add to Cart').should('be.visible').click()
 
                 cy.visit(sweaterSearchPage)
@@ -77,8 +80,8 @@ export function addClothes() {
 
                         cy.get('.a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2').find('a').invoke('removeAttr', 'target').click()
                 })
-                cy.get('#native_dropdown_selected_size_name').select('M')
-                cy.get('#native_dropdown_selected_size_name').contains('M').should('be.visible')
+                cy.get('#native_dropdown_selected_size_name').select('L')
+                cy.get('#native_dropdown_selected_size_name').contains('L').should('be.visible')
                 cy.contains('Add to Cart').should('be.visible').click()
         })
 }
@@ -141,6 +144,9 @@ export function deleteCartItem() {
                 for(let i=$element.length-1; i>=0; i--){
                         cy.get('.a-size-small.sc-action-delete [type="submit"]').eq(i).click({ shiftKey: true })
                         cy.wait(1200)
+                        cy.window().then(win => {
+                                win.close();
+                        });
                         goToCartPage()
                 }
         })
