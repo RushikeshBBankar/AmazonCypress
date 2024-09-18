@@ -10,7 +10,7 @@ let L_Size_clothe_Price
 
 export function searchBestSellerBook() {
         cy.get('#nav-xshop-container').contains('Best Sellers').should('be.visible').click()
-        cy.get('[role="group"]').find('a').contains('Book').should('be.visible').click()
+        cy.get('div[role="group"]').find('a').contains('Book').should('be.visible').click()
         cy.get('#zg-left-col').contains('Health, Family & Personal Development').should('be.visible').click()
         cy.get('#zg-left-col').contains('Self-Help').should('be.visible').click()
         cy.get('#zg-left-col').contains('Abuse').should('be.visible').click()
