@@ -18,7 +18,6 @@ describe('Amazon Book Search and Cart Validation', () => {
                 verifyCartPage()
                 verifyCheckoutPage()
                 cy.go('back')
-                
                 deleteCartItem()
         })
 
